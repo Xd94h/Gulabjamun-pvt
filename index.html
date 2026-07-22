@@ -313,13 +313,16 @@
     background:#fff;
     padding:7px 7px 22px;
     box-shadow:0 8px 18px rgba(0,0,0,.3);
-    width:118px;
+    max-width:140px;
     border-radius:2px;
   }
   .cover-photos .cpoly:first-child{ top:0; left:0; transform:rotate(-9deg); z-index:1; }
   .cover-photos .cpoly:last-child{ top:34px; left:26px; transform:rotate(6deg); z-index:2; }
   .cover-photos .cpoly .frame{
-    width:100%; aspect-ratio:1/1; border-radius:1px; object-fit:cover; display:block;
+    display:block; width:auto; height:auto; max-width:100%; border-radius:1px;
+  }
+  .cover-photos .cpoly .frame.placeholder{
+    width:118px; aspect-ratio:1/1;
   }
   .cover-photos .tape{
     position:absolute;
@@ -361,18 +364,21 @@
     background:#fff;
     padding:10px 10px 34px;
     box-shadow:0 10px 22px rgba(0,0,0,.25);
-    width:130px;
+    max-width:240px;
     border-radius:2px;
   }
   .polaroid:nth-child(odd){transform:rotate(-4deg);}
   .polaroid:nth-child(even){transform:rotate(3deg);}
   .polaroid .frame{
-    width:100%;aspect-ratio:1/1;
-    border-radius:1px;
-    object-fit:cover;
     display:block;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    border-radius:1px;
   }
   .polaroid .frame.placeholder{
+    width:130px;
+    aspect-ratio:1/1;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -516,7 +522,7 @@
     .hero-card{padding:28px 20px 24px;}
     .hero-card h1{font-size:30px;}
     .letter-card{padding:26px 22px;}
-    .polaroid{width:104px;}
+    .polaroid{max-width:170px;}
   }
 </style>
 </head>
